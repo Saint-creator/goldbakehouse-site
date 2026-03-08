@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home • Gold Bakehouse</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="page-shell">
+  <header>
+    <div class="container topbar">
+      <a class="brand" href="index.html"><span class="dot"></span><span>Gold <span style="color:var(--gold)">Bakehouse</span></span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+      </button>
+      <nav>
+        <ul id="site-nav" class="nav-menu">
+          <li><a data-link href="index.html">Home</a></li>
+          <li><a data-link href="menu.html">Menu</a></li>
+          <li><a data-link href="catering.html">Gold Catering</a></li>
+          <li><a data-link href="about.html">About</a></li>
+          <li><a data-link href="allergy.html">Allergy Info</a></li>
+          <li><a data-link href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="cart-btn" href="cart.html"><span>Cart</span><span class="badge" id="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <main class="hero page-main">
+    <section class="container hero-grid">
+      <div>
+        <span class="tag">Fresh • Flaky • Golden</span>
+        <h1>Your home of freshly baked pastries</h1>
+        <p class="lead">
+          Where every bite is made with love and always delicious.
+          Our pastries are sold in sets of 5 pieces — order 5, 10, 15 and so on.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="menu.html">Shop pastries</a>
+          <a class="btn" href="catering.html">Catering services</a>
+        </div>
+
+        <p class="tiny muted" style="margin-top:.8rem">
+          Winnipeg, Manitoba • Pickup/Local delivery Every Sunday
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="thumb">
+          <video src="assets/images/home.MOV" autoplay muted loop playsinline preload="metadata" aria-label="Fresh pastries video"></video>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+      <div>© <span id="year"></span> Gold Bakehouse • Winnipeg, Manitoba</div>
+      <div class="tiny">Freshly baked, always golden.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js?v=20260206"></script>
+  <script src="assets/js/app.js?v=20260206"></script>
+  <script src="assets/js/site.js?v=20260206"></script>
+</body>
+</html>

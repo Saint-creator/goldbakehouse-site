@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cart • Gold Bakehouse</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <a class="brand" href="index.html"><span class="dot"></span><span>Gold <span style="color:var(--gold)">Bakehouse</span></span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+      </button>
+      <nav>
+        <ul id="site-nav" class="nav-menu">
+          <li><a data-link href="index.html">Home</a></li>
+          <li><a data-link href="menu.html">Menu</a></li>
+          <li><a data-link href="catering.html">Gold Catering</a></li>
+          <li><a data-link href="about.html">About</a></li>
+          <li><a data-link href="allergy.html">Allergy Info</a></li>
+          <li><a data-link href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="cart-btn" href="cart.html"><span>Cart</span><span class="badge" id="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2 class="section-title">Your Cart</h2>
+
+      <div id="cart-empty" class="muted">
+        Your cart is empty. Browse the <a href="menu.html"><strong>menu</strong></a> to add pastries.
+      </div>
+
+      <div id="cart-table-wrap" style="display:none">
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Packs</th>
+              <th>Price</th>
+              <th class="right">Subtotal</th>
+              <th class="right"></th>
+            </tr>
+          </thead>
+          <tbody id="cart-rows"></tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" class="right">Total</td>
+              <td class="right" id="cart-total">$0.00</td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div style="margin-top:1rem; display:flex; gap:.6rem; flex-wrap:wrap; justify-content:flex-end">
+          <button class="btn" id="clear-cart">Clear cart</button>
+          <a class="btn primary" href="checkout.html">Proceed to checkout</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+      <div>© <span id="year"></span> Gold Bakehouse</div>
+      <div class="tiny">Thank you for your order.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js?v=20260206"></script>
+  <script src="assets/js/app.js?v=20260206"></script>
+  <script src="assets/js/site.js?v=20260206"></script>
+</body>
+</html>

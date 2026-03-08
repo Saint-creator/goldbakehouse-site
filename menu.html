@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu • Gold Bakehouse</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <a class="brand" href="index.html"><span class="dot"></span><span>Gold <span style="color:var(--gold)">Bakehouse</span></span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+      </button>
+      <nav>
+        <ul id="site-nav" class="nav-menu">
+          <li><a data-link href="index.html">Home</a></li>
+          <li><a data-link href="menu.html">Menu</a></li>
+          <li><a data-link href="catering.html">Gold Catering</a></li>
+          <li><a data-link href="about.html">About</a></li>
+          <li><a data-link href="allergy.html">Allergy Info</a></li>
+          <li><a data-link href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="cart-btn" href="cart.html"><span>Cart</span><span class="badge" id="cart-count">0</span></a>
+    </div>
+  </header>
+
+    <main>
+    <section class="container">
+      <h2 class="section-title">Menu</h2>
+      <p class="section-sub">
+        All items are sold in packs of 5 (choose 5, 10, 15, …). Ingredients and reheating info included.
+      </p>
+      <div id="product-grid" class="grid products"></div>
+    </section>
+
+    <!-- Product Gallery Modal -->
+    <div id="galleryModal" class="modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-label="Product gallery">
+        <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+
+        <div class="modal-body">
+          <div class="modal-imgwrap">
+            <button class="modal-nav prev" id="modalPrev" aria-label="Previous image">‹</button>
+            <img id="modalImg" alt="" />
+            <button class="modal-nav next" id="modalNext" aria-label="Next image">›</button>
+          </div>
+
+          <div class="modal-info">
+            <h3 id="modalTitle" style="margin:0 0 .25rem"></h3>
+            <div class="tiny muted" id="modalPrice"></div>
+            <p class="muted" id="modalDesc" style="margin:.6rem 0 0"></p>
+
+            <div class="dots" id="modalDots"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+      <div>© <span id="year"></span> Gold Bakehouse</div>
+      <div class="tiny">Dairy • Gluten • Eggs • Wheat</div>
+    </div>
+  </footer>
+
+  <!-- ✅ Load app.js directly -->
+  <script src="assets/js/data.js?v=20260206"></script>
+  <script src="assets/js/app.js?v=20260206"></script>
+  <script src="assets/js/site.js?v=20260206"></script>
+
+</body>
+</html>

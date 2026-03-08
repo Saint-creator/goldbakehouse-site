@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout • Gold Bakehouse</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <a class="brand" href="index.html"><span class="dot"></span><span>Gold <span style="color:var(--gold)">Bakehouse</span></span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+      </button>
+      <nav>
+        <ul id="site-nav" class="nav-menu">
+          <li><a data-link href="index.html">Home</a></li>
+          <li><a data-link href="menu.html">Menu</a></li>
+          <li><a data-link href="catering.html">Gold Catering</a></li>
+          <li><a data-link href="about.html">About</a></li>
+          <li><a data-link href="allergy.html">Allergy Info</a></li>
+          <li><a data-link href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="cart-btn" href="cart.html"><span>Cart</span><span class="badge" id="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2 class="section-title">Checkout</h2>
+
+      <form id="checkout-form" class="grid" style="grid-template-columns:1fr 1fr;gap:1rem">
+        <div class="card" style="padding:1rem">
+          <h3>Customer details</h3>
+
+          <label class="tiny">Full name
+            <input required name="name" placeholder="Jane Doe" autocomplete="name" />
+          </label>
+
+          <label class="tiny">Email
+            <input required type="email" name="email" placeholder="you@example.com" autocomplete="email" />
+          </label>
+
+          <label class="tiny">Phone
+            <input required name="phone" placeholder="204-000-0000" inputmode="tel" autocomplete="tel" />
+          </label>
+
+          <label class="tiny">Fulfillment
+            <select name="fulfillment" id="fulfillment" required>
+              <option value="pickup">Pickup</option>
+              <option value="delivery">Delivery</option>
+            </select>
+          </label>
+
+          <div id="pickup-address-wrap" class="tiny muted" style="display:none">
+            Pickup address: 433 Main Street
+          </div>
+
+          <div id="delivery-zone-wrap" style="display:none">
+            <label class="tiny">Delivery zone
+              <select name="delivery-zone" id="delivery-zone">
+                <option value="">Select zone</option>
+                <option value="5">Downtown: $5</option>
+                <option value="10">North, West, East, South: $10</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="tiny">Address
+            <textarea name="address" id="address" rows="3" placeholder="Street, City, Province, Postal Code" autocomplete="street-address"></textarea>
+          </label>
+
+          <label class="tiny">Delivery notes (optional)
+            <textarea name="notes" rows="3" placeholder="Gate code, drop-off details, etc." autocomplete="off"></textarea>
+          </label>
+        </div>
+
+        <div class="card" style="padding:1rem">
+          <h3>Order summary</h3>
+          <div id="summary"></div>
+
+          <hr />
+
+          <div id="square-config" data-app-id="sq0idp-n1GngqP_xWSz6ezUEEAt7w" data-location-id="LS8G18FWVWQMA"></div>
+          <div id="card-container" style="margin:.6rem 0;"></div>
+          <button class="add-btn" id="card-button" type="button">Pay with card</button>
+          <p class="tiny muted" id="payment-status" aria-live="polite">Secure payment by Square.</p>
+
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+      <div>© <span id="year"></span> Gold Bakehouse</div>
+      <div class="tiny">Allergy: Dairy • Gluten • Eggs • Wheat</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js?v=20260206"></script>
+  <script src="assets/js/app.js?v=20260206"></script>
+  <script src="assets/js/site.js?v=20260206"></script>
+  <script src="https://web.squarecdn.com/v1/square.js"></script>
+  <script src="assets/js/checkout.js?v=20260206"></script>
+</body>
+</html>
